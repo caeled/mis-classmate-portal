@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok Good &amp; Tough — MIS Portal</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.gt-hero { padding: 2rem 0 1rem; }
+.gt-hero h1 { font-size: 2.2rem; margin: 0.2rem 0; }
+.gt-box { background: var(--bg-elev, #111); border: 1px solid var(--line, #333); border-radius: 12px; padding: 1.2rem; margin: 1rem 0; }
+.gt-output { width: 100%; min-height: 180px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<aside>
+  <a class="brand" href="index.html"><span class="mark">M</span> MIS<span class="muted"> / PORTAL</span></a>
+  <div class="nav-label">GOOD &amp; TOUGH</div>
+  <nav>
+    <a href="index.html">← Back to Portal</a>
+    <a href="#generator">Prompt generator</a>
+    <a href="#how">How to use it</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="dot"></span> Higher rigor<br><small>No hand-holding</small></div>
+</aside>
+<main>
+<header><span>GROK LAYER</span><a href="index.html">MIS Portal ↗</a></header>
+
+<section class="gt-hero">
+  <div class="eyebrow">SPACE FOR THE HARD PART</div>
+  <h1>Good &amp; Tough.</h1>
+  <p>Generate sharper, more demanding prompts for competency evidence, architecture trade-offs, and real-world claims. Built for pressure-testing, not encouragement.</p>
+</section>
+
+<section id="generator" class="gt-box">
+  <h2>Tough Assessor Generator</h2>
+  <p class="footnote">Pick a focus and claim. The output is a ready-to-paste prompt that expects you to defend assumptions, surface trade-offs, and name frameworks without fluff.</p>
+  <form id="gt-form" class="tk-form">
+    <label>Competency / Domain
+      <select id="gt-topic">
+        <option value="IT Infrastructure &amp; Resilience">IT Infrastructure &amp; Resilience</option>
+        <option value="Systems Analysis &amp; Requirements">Systems Analysis &amp; Requirements</option>
+        <option value="Enterprise Capabilities &amp; Governance">Enterprise Capabilities &amp; Governance</option>
+        <option value="Cloud Architecture &amp; Cost/Security Trade-offs">Cloud Architecture &amp; Trade-offs</option>
+        <option value="Security, Ethics &amp; Risk">Security, Ethics &amp; Risk</option>
+        <option value="Data, Analytics &amp; Decision Quality">Data, Analytics &amp; Decision Quality</option>
+      </select>
+    </label>
+    <label>Mode
+      <select id="gt-mode">
+        <option value="tough_assessor">Good &amp; Tough Assessor (default)</option>
+        <option value="edge_cases">Edge-case &amp; Failure-mode pressure</option>
+        <option value="framework_map">Framework mapping (TOGAF / NIST / COBIT / ITIL)</option>
+        <option value="experience_to_rigor">30-year experience → graduate rigor</option>
+      </select>
+    </label>
+    <label class="tk-wide">Claim or artifact you want stress-tested
+      <input id="gt-concept" placeholder="e.g. active-active failover at 99.999% is worth the cost because…">
+    </label>
+    <div class="resource-buttons tk-wide">
+      <button class="button" type="button" id="gt-generate">Generate tough prompt</button>
+    </div>
+  </form>
+  <div style="margin-top:1rem">
+    <label for="gt-output">Generated prompt</label>
+    <textarea id="gt-output" class="gt-output" readonly placeholder="Your tough prompt appears here…"></textarea>
+    <button class="button" type="button" id="gt-copy" style="margin-top:0.5rem">Copy to clipboard</button>
+  </div>
+</section>
+
+<section id="how" class="gt-box">
+  <h2>How to use it</h2>
+  <ul>
+    <li>Paste the generated prompt into Grok (or any model) along with your draft evidence or notes.</li>
+    <li>Answer the questions it produces. The point is to surface weak assumptions before an assessor does.</li>
+    <li>Log the session in the main portal’s AI-use log if your course requires disclosure.</li>
+    <li>Export notes from the study areas or toolkit as backup; this page does not store anything.</li>
+  </ul>
+  <p class="footnote">This page is a tool, not a grade. Your course rubric and assessor still decide. Use it to raise the floor on your own work.</p>
+</section>
+</main>
+<script>
+document.getElementById('gt-form').addEventListener('submit', e => e.preventDefault());
+
+document.getElementById('gt-generate').addEventListener('click', () => {
+  const topic = document.getElementById('gt-topic').value;
+  const mode = document.getElementById('gt-mode').value;
+  const concept = document.getElementById('gt-concept').value.trim() || 'the proposed architecture or operational claim';
+  let text = '';
+
+  if (mode === 'tough_assessor') {
+    text = `You are a rigorous graduate MIS assessor. No encouragement, no softening. Domain: ${topic}.
+
+Claim under pressure: "${concept}"
+
+1. Identify the strongest technical or organizational assumption in this claim and show where it fails under realistic load, failure, or political conditions.
+2. Name the specific trade-off (cost, complexity, risk, latency, governance) that is being understated.
+3. Which frameworks (TOGAF, NIST CSF/800-series, COBIT, ITIL, or equivalent) would an assessor expect to see referenced, and what does the claim currently lack?
+4. Ask three hard Socratic questions that force the writer to defend scope, evidence, and residual risk. Do not accept hand-waving.`;
+  } else if (mode === 'edge_cases') {
+    text = `Pressure-test this claim for failure modes. Domain: ${topic}. Claim: "${concept}"
+
+List the top edge cases, cascading failures, or organizational conditions where this approach breaks. For each, state what evidence or control would be required to keep the claim defensible at graduate level.`;
+  } else if (mode === 'framework_map') {
+    text = `Map this practical claim to formal frameworks without fluff. Domain: ${topic}. Claim: "${concept}"
+
+Show the direct mapping to TOGAF, NIST, COBIT, or ITIL elements. Flag any places where the claim uses operational language that does not yet meet the precision an assessor would accept.`;
+  } else {
+    text = `I have extensive operational experience. Convert the following claim into language and evidence that survives graduate MIS scrutiny. Domain: ${topic}. Claim: "${concept}"
+
+Rewrite the core assertion in competency-aligned terms, list the missing academic or standards references, and identify the residual risks an assessor will still challenge.`;
+  }
+
+  document.getElementById('gt-output').value = text;
+});
+
+document.getElementById('gt-copy').addEventListener('click', () => {
+  const out = document.getElementById('gt-output');
+  if (!out.value) return;
+  navigator.clipboard.writeText(out.value).then(() => {
+    const btn = document.getElementById('gt-copy');
+    const orig = btn.textContent;
+    btn.textContent = 'Copied';
+    setTimeout(() => btn.textContent = orig, 1600);
+  });
+});
+</script>
+</body>
+</html>
