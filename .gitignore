@@ -1,0 +1,8 @@
+.env
+.env.*
+*-private.js
+*.local.js
+private/
+__pycache__/
+Thumbs.db
+Desktop.ini
