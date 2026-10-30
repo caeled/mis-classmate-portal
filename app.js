@@ -102,4 +102,37 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Pre-filled Gemini disclosure in your AI-use log!");
     });
   }
+
+  // --- Terminal Quick-Launch Helper ---
+  const terminalBtn = document.getElementById("btn-open-terminal");
+  if (terminalBtn) {
+    terminalBtn.addEventListener("click", () => {
+      // 1. One-click script content that opens PowerShell in the directory
+      const batContent =
+        '@echo off\r\n' +
+        'cd /d "%USERPROFILE%\\mis-research" 2>nul || cd /d "%HOME%\\mis-research"\r\n' +
+        'start powershell.exe -NoExit -Command "Write-Host \'=== MIS Deep Research Workspace ===\' -ForegroundColor Cyan"\r\n';
+
+      // 2. Generate and trigger download of the launcher file
+      const blob = new Blob([batContent], { type: "application/x-bat" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "open-research.bat";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+
+      // 3. Fallback: Copy the direct command to the clipboard
+      const fallbackCommand = 'cd ~/mis-research; powershell';
+      navigator.clipboard.writeText(fallbackCommand);
+
+      // 4. Visual feedback on the button
+      const origText = terminalBtn.innerHTML;
+      terminalBtn.textContent = "Downloaded & Copied!";
+      setTimeout(() => {
+        terminalBtn.innerHTML = origText;
+      }, 2500);
+    });
+  }
 });
