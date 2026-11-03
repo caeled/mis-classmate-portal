@@ -82,6 +82,40 @@
     margin-bottom: 0.4rem;
   }
 
+
+  .rightlist {
+    margin: 0.6rem 0 0;
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+  .rightlist li {
+    border-bottom: none;
+    padding: 0.15rem 0;
+    font-size: 0.98rem;
+  }
+  .rightlist a {
+    display: inline;
+    padding: 0;
+    font-size: 0.98rem;
+  }
+  .placeholderish {
+    color: #9a917e;
+    font-style: italic;
+  }
+  .btnstack {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+  }
+  .btnstack li {
+    border-bottom: none;
+    padding: 0.2rem 0;
+    text-align: center;
+  }
+  .libbtn.small {
+    font-size: 0.92rem;
+    padding: 0.35rem 0.55rem;
+  }
   .govlist {
     margin: 0;
     padding-left: 1.2rem;
@@ -155,7 +189,17 @@
       </td>
       <td class="colside" style="text-align: center;">
         <a class="libbtn" href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a>
-        <!-- room for an ordered list on this side later -->
+        <ol class="rightlist">
+          <li><span class="placeholderish">Audio Archive</span></li>
+          <li><a href="https://web.archive.org/">Wayback Machine</a></li>
+        </ol>
+        <ul class="btnstack">
+          <li><a class="libbtn small" href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Knowledge Bases</a></li>
+          <li><a class="libbtn small" href="https://www.uchicagomedicine.org/">Chicago Clinic</a></li>
+          <li><a class="libbtn small" href="https://www.mayoclinic.org/">Mayo Clinic</a></li>
+          <li><a class="libbtn small" href="https://www.mercy.com/">Mercy Health</a></li>
+          <li><a class="libbtn small" href="https://www.promedica.org/">ProMedica Health</a></li>
+        </ul>
       </td>
     </tr>
   </table>
