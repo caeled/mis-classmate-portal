@@ -60,6 +60,57 @@
     background: #f0ead9;
     color: #0d2f57;
   }
+
+  .headtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  .headtable td {
+    vertical-align: top;
+    padding: 0.25rem;
+  }
+  .colside {
+    width: 22%;
+  }
+  .colmid {
+    width: 56%;
+    text-align: center;
+  }
+  .sidehead {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+  }
+  .soonlist {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: decimal;
+  }
+  .soonlist li {
+    border-bottom: none;
+    padding: 0.15rem 0;
+    color: #9a917e;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  .libbtn {
+    display: inline-block;
+    background: #f3ecd9;
+    border: 1px solid #c9c2ae;
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+  }
+  .funhead {
+    font-family: "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #b3541e;
+    letter-spacing: 0.04em;
+    margin: 0.5rem auto 0.8rem;
+    text-shadow: 2px 2px 0 #f3ecd9;
+  }
   .backlink {
     font-size: 0.95rem;
   }
@@ -69,6 +120,106 @@
 </style>
 </head>
 <body>
+  <table class="headtable">
+    <tr>
+      <td class="colside">
+        <div class="sidehead">Coming Soon</div>
+        <ol class="soonlist">
+          <li>Name</li>
+          <li>Name</li>
+          <li>Name</li>
+        </ol>
+      </td>
+      <td class="colmid">
+        <a href="https://copilot.microsoft.com/" title="Copilot"><img src="robots-header.jpg" alt="Cute robots holding open doors across a meadow" style="display:block; width:100%; max-width:1200px; margin:0 auto 1rem; border-radius:10px;"></a>
+        <div class="funhead">Caeled's Search Engine</div>
+      </td>
+      <td class="colside" style="text-align: center;">
+        <a class="libbtn" href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a>
+        <!-- room for an ordered list on this side later -->
+      </td>
+    </tr>
+  </table>
+  <div class="desk" style="margin-top: 1.5rem;">
+    <h2 id="search" style="margin-top: 0;">Search</h2>
+    <form onsubmit="return deskSearch(this)">
+      <input type="text" name="q" placeholder="Type your search..." required
+             style="width: 55%; padding: 0.45rem; font-size: 1rem; vertical-align: top;">
+      <details class="picker">
+        <summary id="engineSummary">Google</summary>
+        <div class="panel">
+          <label><input type="checkbox" name="engine" value="https://www.google.com/search?q=" data-name="Google" checked> Google</label>
+          <label><input type="checkbox" name="engine" value="https://www.bing.com/search?q=" data-name="Microsoft Bing"> Microsoft Bing</label>
+          <label><input type="checkbox" name="engine" value="https://duckduckgo.com/?q=" data-name="DuckDuckGo"> DuckDuckGo</label>
+          <label><input type="checkbox" name="engine" value="https://search.brave.com/search?q=" data-name="Brave Search"> Brave Search</label>
+          <label><input type="checkbox" name="engine" value="https://search.yahoo.com/search?p=" data-name="Yahoo! Search"> Yahoo! Search</label>
+          <label><input type="checkbox" name="engine" value="https://www.baidu.com/s?wd=" data-name="Baidu"> Baidu</label>
+          <label><input type="checkbox" name="engine" value="https://yandex.com/search/?text=" data-name="Yandex"> Yandex</label>
+          <label><input type="checkbox" name="engine" value="https://www.ecosia.org/search?q=" data-name="Ecosia"> Ecosia</label>
+          <label><input type="checkbox" name="engine" value="https://www.startpage.com/sp/search?query=" data-name="Startpage"> Startpage</label>
+          <label><input type="checkbox" name="engine" value="https://www.qwant.com/?q=" data-name="Qwant"> Qwant</label>
+          <label><input type="checkbox" name="engine" value="https://www.mojeek.com/search?q=" data-name="Mojeek"> Mojeek</label>
+          <label><input type="checkbox" name="engine" value="https://kagi.com/search?q=" data-name="Kagi"> Kagi</label>
+          <label><input type="checkbox" name="engine" value="https://www.dogpile.com/serp?q=" data-name="Dogpile"> Dogpile</label>
+          <label><input type="checkbox" name="engine" value="https://www.metacrawler.com/serp?q=" data-name="MetaCrawler"> MetaCrawler</label>
+          <label><input type="checkbox" name="engine" value="https://www.webcrawler.com/serp?q=" data-name="WebCrawler"> WebCrawler</label>
+          <label><input type="checkbox" name="engine" value="https://search.lycos.com/web/?q=" data-name="Lycos"> Lycos</label>
+          <label><input type="checkbox" name="engine" value="https://swisscows.com/en/web?query=" data-name="Swisscows"> Swisscows</label>
+          <label><input type="checkbox" name="engine" value="https://you.com/search?q=" data-name="You.com"> You.com</label>
+          <label><input type="checkbox" name="engine" value="https://yep.com/search?q=" data-name="Yep"> Yep</label>
+          <label><input type="checkbox" name="engine" value="https://www.sogou.com/web?query=" data-name="Sogou"> Sogou</label>
+          <label><input type="checkbox" name="engine" value="https://scholar.google.com/scholar?q=" data-name="Google Scholar"> Google Scholar</label>
+          <label><input type="checkbox" name="engine" value="https://openverse.org/search?q=" data-name="Openverse"> Openverse</label>
+          <label><input type="checkbox" name="engine" value="https://www.shodan.io/search?query=" data-name="Shodan"> Shodan</label>
+        </div>
+      </details>
+      <button type="submit" style="padding: 0.45rem 0.9rem; font-size: 1rem; vertical-align: top;">Go</button>
+      <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #6b6353;">If only one tab opens, your browser blocked the rest as pop-ups: click the pop-up icon at the right end of the address bar, choose "Always allow pop-ups and redirects" for this site, and search again. You only have to do that once.</p>
+    </form>
+  </div>
+  <style>
+    .picker { display: inline-block; position: relative; vertical-align: top; }
+    .picker summary {
+      padding: 0.45rem 0.6rem; font-size: 1rem; cursor: pointer;
+      background: #fff; border: 1px solid #8a8378; border-radius: 3px; min-width: 10rem;
+    }
+    .picker .panel {
+      position: absolute; z-index: 10; left: 0; top: 100%;
+      background: #fffdf8; border: 1px solid #d8d2c4; border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      max-height: 240px; overflow: auto; padding: 0.4rem 0.6rem; min-width: 12rem;
+    }
+    .picker .panel label { display: block; white-space: nowrap; padding: 0.2rem 0; font-size: 0.98rem; cursor: pointer; }
+  </style>
+  <script>
+    function pickedEngines(f) {
+      return f.querySelectorAll('input[name="engine"]:checked');
+    }
+    function refreshSummary(f) {
+      var names = [];
+      pickedEngines(f).forEach(function (b) { names.push(b.dataset.name); });
+      document.getElementById("engineSummary").textContent =
+        names.length ? (names.length <= 2 ? names.join(", ") : names.length + " engines") : "Pick an engine";
+    }
+    document.querySelectorAll('input[name="engine"]').forEach(function (b) {
+      b.addEventListener("change", function () { refreshSummary(b.form); });
+    });
+    function deskSearch(f) {
+      var q = encodeURIComponent(f.q.value);
+      var picked = pickedEngines(f);
+      if (picked.length === 0) { alert("Pick at least one engine"); return false; }
+      var blocked = 0;
+      picked.forEach(function (b) {
+        var w = window.open(b.value + q, "_blank");
+        if (!w) { blocked++; }
+      });
+      if (blocked > 0) {
+        alert(blocked + " tab(s) were blocked by your browser's pop-up blocker. " +
+              "Click the pop-up icon in the address bar and choose 'Always allow pop-ups' for this site, then search again.");
+      }
+      return false;
+    }
+  </script>
   <div class="desk">
     <p class="backlink"><a href="LinkFromPortal.html">&larr; Back to Steve's Web Desk</a></p>
     <h1>Digital Library</h1>
@@ -168,5 +319,6 @@
 
     <p class="backlink" style="margin-top: 2rem;"><a href="LinkFromPortal.html">&larr; Back to Steve's Web Desk</a></p>
   </div>
+  <a href="https://muse.ai" title="Muse"><img src="ai-footer.jpg" alt="Various friendly AI beings holding open doors along a path" style="display:block; width:100%; max-width:1200px; margin:1.5rem auto 0; border-radius:10px;"></a>
 </body>
 </html>
