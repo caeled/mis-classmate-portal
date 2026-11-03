@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steve's Web Desk</title>
+<!-- Public git mirror of Steve's Web Desk (public version). Canonical live page: http://caeled.geekgalaxy.com/web/steve/phoenix/LinkFromPortal.html -->
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f4f1ea;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+  .desk {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d2c4;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 1.9rem;
+    border-bottom: 2px solid #d8d2c4;
+    padding-bottom: 0.5rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-bottom: 1px solid #eee7d8;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  a {
+    display: block;
+    padding: 0.55rem 0.25rem;
+    color: #1a4f8b;
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+  a:hover {
+    background: #f0ead9;
+    color: #0d2f57;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  h2 {
+    scroll-margin-top: 1rem;
+  }
+  .indexbar {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d2c4;
+    border-radius: 10px;
+    padding: 0.7rem 1.1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    line-height: 2;
+    font-size: 0.95rem;
+  }
+  .indexbar a {
+    display: inline;
+    padding: 0.15rem 0.3rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    border-radius: 4px;
+  }
+  .indexbar .sep {
+    color: #b6ad97;
+  }
+  .toppick a {
+    background: #f3ecd9;
+    font-weight: bold;
+  }
+  .jumpwrap {
+    margin: 0 0 1rem;
+  }
+  .jumpwrap select {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid #c9c2ae;
+    border-radius: 6px;
+    background: #fffdf8;
+    color: #2b2b2b;
+    max-width: 100%;
+  }
+  .placeholder a {
+    color: #9a917e;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <a href="https://copilot.microsoft.com/" title="Copilot"><img src="robots-header.jpg" alt="Cute robots holding open doors across a meadow" style="display:block; width:100%; max-width:1200px; margin:0 auto 1rem; border-radius:10px;"></a>
+  <!-- Search box: collapsed engine picker, Google by default; expand it to tick more engines.
+       Each picked engine opens in its own new tab. -->
+  <nav class="indexbar"><strong>Index:</strong> <a href="#search">Search</a> <span class="sep">&middot;</span> <a href="#general">General web search</a> <span class="sep">&middot;</span> <a href="#open-source">Open Source</a> <span class="sep">&middot;</span> <a href="#localized">Geographically localized</a> <span class="sep">&middot;</span> <a href="#business">Business</a> <span class="sep">&middot;</span> <a href="#computers">Computers</a> <span class="sep">&middot;</span> <a href="#content">Content</a> <span class="sep">&middot;</span> <a href="#dark-web">Dark web</a> <span class="sep">&middot;</span> <a href="#education">Education</a> <span class="sep">&middot;</span> <a href="#enterprise">Enterprise</a> <span class="sep">&middot;</span> <a href="#events">Events</a> <span class="sep">&middot;</span> <a href="#food">Food and recipes</a> <span class="sep">&middot;</span> <a href="#genealogy">Genealogy</a> <span class="sep">&middot;</span> <a href="#job">Job</a> <span class="sep">&middot;</span> <a href="#legal">Legal</a> <span class="sep">&middot;</span> <a href="#medical">Medical</a> <span class="sep">&middot;</span> <a href="#mobile">Mobile/handheld</a> <span class="sep">&middot;</span> <a href="#news">News</a> <span class="sep">&middot;</span> <a href="#people">People</a> <span class="sep">&middot;</span> <a href="#real-estate">Real estate/property</a> <span class="sep">&middot;</span> <a href="#television">Television</a> <span class="sep">&middot;</span> <a href="#video">Video</a> <span class="sep">&middot;</span> <a href="#video-games">Video games</a> <span class="sep">&middot;</span> <a href="#datasets">Datasets</a> <span class="sep">&middot;</span> <a href="#maps">Maps</a> <span class="sep">&middot;</span> <a href="#multimedia">Multimedia</a> <span class="sep">&middot;</span> <a href="#price">Price</a> <span class="sep">&middot;</span> <a href="#source-code">Source code</a> <span class="sep">&middot;</span> <a href="#bittorrent">BitTorrent</a> <span class="sep">&middot;</span> <a href="#blog">Blog</a> <span class="sep">&middot;</span> <a href="#appliances">Search appliances</a> <span class="sep">&middot;</span> <a href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Caeled's ITKB Notebook</a> <span class="sep">&middot;</span> <a href="DigitalLibrary.html">Digital Library</a></nav>
+  <div class="desk" style="margin-top: 1.5rem;">
+    <h2 id="search" style="margin-top: 0;">Search</h2>
+    <form onsubmit="return deskSearch(this)">
+      <input type="text" name="q" placeholder="Type your search..." required
+             style="width: 55%; padding: 0.45rem; font-size: 1rem; vertical-align: top;">
+      <details class="picker">
+        <summary id="engineSummary">Google</summary>
+        <div class="panel">
+          <label><input type="checkbox" name="engine" value="https://www.google.com/search?q=" data-name="Google" checked> Google</label>
+          <label><input type="checkbox" name="engine" value="https://www.bing.com/search?q=" data-name="Microsoft Bing"> Microsoft Bing</label>
+          <label><input type="checkbox" name="engine" value="https://duckduckgo.com/?q=" data-name="DuckDuckGo"> DuckDuckGo</label>
+          <label><input type="checkbox" name="engine" value="https://search.brave.com/search?q=" data-name="Brave Search"> Brave Search</label>
+          <label><input type="checkbox" name="engine" value="https://search.yahoo.com/search?p=" data-name="Yahoo! Search"> Yahoo! Search</label>
+          <label><input type="checkbox" name="engine" value="https://www.baidu.com/s?wd=" data-name="Baidu"> Baidu</label>
+          <label><input type="checkbox" name="engine" value="https://yandex.com/search/?text=" data-name="Yandex"> Yandex</label>
+          <label><input type="checkbox" name="engine" value="https://www.ecosia.org/search?q=" data-name="Ecosia"> Ecosia</label>
+          <label><input type="checkbox" name="engine" value="https://www.startpage.com/sp/search?query=" data-name="Startpage"> Startpage</label>
+          <label><input type="checkbox" name="engine" value="https://www.qwant.com/?q=" data-name="Qwant"> Qwant</label>
+          <label><input type="checkbox" name="engine" value="https://www.mojeek.com/search?q=" data-name="Mojeek"> Mojeek</label>
+          <label><input type="checkbox" name="engine" value="https://kagi.com/search?q=" data-name="Kagi"> Kagi</label>
+          <label><input type="checkbox" name="engine" value="https://www.dogpile.com/serp?q=" data-name="Dogpile"> Dogpile</label>
+          <label><input type="checkbox" name="engine" value="https://www.metacrawler.com/serp?q=" data-name="MetaCrawler"> MetaCrawler</label>
+          <label><input type="checkbox" name="engine" value="https://www.webcrawler.com/serp?q=" data-name="WebCrawler"> WebCrawler</label>
+          <label><input type="checkbox" name="engine" value="https://search.lycos.com/web/?q=" data-name="Lycos"> Lycos</label>
+          <label><input type="checkbox" name="engine" value="https://swisscows.com/en/web?query=" data-name="Swisscows"> Swisscows</label>
+          <label><input type="checkbox" name="engine" value="https://you.com/search?q=" data-name="You.com"> You.com</label>
+          <label><input type="checkbox" name="engine" value="https://yep.com/search?q=" data-name="Yep"> Yep</label>
+          <label><input type="checkbox" name="engine" value="https://www.sogou.com/web?query=" data-name="Sogou"> Sogou</label>
+          <label><input type="checkbox" name="engine" value="https://scholar.google.com/scholar?q=" data-name="Google Scholar"> Google Scholar</label>
+          <label><input type="checkbox" name="engine" value="https://openverse.org/search?q=" data-name="Openverse"> Openverse</label>
+          <label><input type="checkbox" name="engine" value="https://www.shodan.io/search?query=" data-name="Shodan"> Shodan</label>
+        </div>
+      </details>
+      <button type="submit" style="padding: 0.45rem 0.9rem; font-size: 1rem; vertical-align: top;">Go</button>
+      <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #6b6353;">If only one tab opens, your browser blocked the rest as pop-ups: click the pop-up icon at the right end of the address bar, choose "Always allow pop-ups and redirects" for this site, and search again. You only have to do that once.</p>
+    </form>
+  </div>
+  <style>
+    .picker { display: inline-block; position: relative; vertical-align: top; }
+    .picker summary {
+      padding: 0.45rem 0.6rem; font-size: 1rem; cursor: pointer;
+      background: #fff; border: 1px solid #8a8378; border-radius: 3px; min-width: 10rem;
+    }
+    .picker .panel {
+      position: absolute; z-index: 10; left: 0; top: 100%;
+      background: #fffdf8; border: 1px solid #d8d2c4; border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      max-height: 240px; overflow: auto; padding: 0.4rem 0.6rem; min-width: 12rem;
+    }
+    .picker .panel label { display: block; white-space: nowrap; padding: 0.2rem 0; font-size: 0.98rem; cursor: pointer; }
+  </style>
+  <script>
+    function pickedEngines(f) {
+      return f.querySelectorAll('input[name="engine"]:checked');
+    }
+    function refreshSummary(f) {
+      var names = [];
+      pickedEngines(f).forEach(function (b) { names.push(b.dataset.name); });
+      document.getElementById("engineSummary").textContent =
+        names.length ? (names.length <= 2 ? names.join(", ") : names.length + " engines") : "Pick an engine";
+    }
+    document.querySelectorAll('input[name="engine"]').forEach(function (b) {
+      b.addEventListener("change", function () { refreshSummary(b.form); });
+    });
+    function deskSearch(f) {
+      var q = encodeURIComponent(f.q.value);
+      var picked = pickedEngines(f);
+      if (picked.length === 0) { alert("Pick at least one engine"); return false; }
+      var blocked = 0;
+      picked.forEach(function (b) {
+        var w = window.open(b.value + q, "_blank");
+        if (!w) { blocked++; }
+      });
+      if (blocked > 0) {
+        alert(blocked + " tab(s) were blocked by your browser's pop-up blocker. " +
+              "Click the pop-up icon in the address bar and choose 'Always allow pop-ups' for this site, then search again.");
+      }
+      return false;
+    }
+  </script>
+  <div class="desk">
+    <h1>Coming Soon</h1>
+    <p class="jumpwrap">
+      <label for="sectionJump">Jump to a section:</label>
+      <select id="sectionJump" onchange="var t=document.getElementById(this.value); if(t){ t.scrollIntoView({behavior:'smooth'}); } this.selectedIndex=0;">
+        <option value="">Choose a subject&hellip;</option>
+        <option value="general">General web search</option>
+        <option value="open-source">Open Source</option>
+        <option value="localized">Geographically localized</option>
+        <option value="business">Business</option>
+        <option value="computers">Computers</option>
+        <option value="content">Content</option>
+        <option value="dark-web">Dark web</option>
+        <option value="education">Education</option>
+        <option value="enterprise">Enterprise</option>
+        <option value="events">Events</option>
+        <option value="food">Food and recipes</option>
+        <option value="genealogy">Genealogy</option>
+        <option value="job">Job</option>
+        <option value="legal">Legal</option>
+        <option value="medical">Medical</option>
+        <option value="mobile">Mobile/handheld</option>
+        <option value="news">News</option>
+        <option value="people">People</option>
+        <option value="real-estate">Real estate/property</option>
+        <option value="television">Television</option>
+        <option value="video">Video</option>
+        <option value="video-games">Video games</option>
+        <option value="datasets">Datasets</option>
+        <option value="maps">Maps</option>
+        <option value="multimedia">Multimedia</option>
+        <option value="price">Price</option>
+        <option value="source-code">Source code</option>
+        <option value="bittorrent">BitTorrent</option>
+        <option value="blog">Blog</option>
+        <option value="appliances">Search appliances</option>
+      </select>
+    </p>
+    <ul>
+      <li class="toppick"><a href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Caeled's ITKB Notebook</a></li>
+      <li><a href="DigitalLibrary.html">Digital Library</a></li>
+      <li><a href="https://www.refdesk.com/">RefDesk</a></li>
+      <li><a href="https://www.mediawiki.org/wiki/MediaWiki">Media Wiki</a></li>
+      <li><a href="https://www.wikipedia.org/">Wikipedia - Encyclopedia</a></li>
+      <li><a href="https://www.wiktionary.org/">Wiki Dictionary - Free Dictionary</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons - Media Files</a></li>
+      <li><a href="https://www.wikiquote.org/">Wiki Quote - Quotation DB</a></li>
+      <li><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">WikiData - Free Knowledgebase</a></li>
+      <li><a href="https://wikisource.org/wiki/Wikisource:Main_Page">WikiSource - Source Material</a></li>
+      <li><a href="https://www.wikiversity.org/">Wiki University - College Textbooks</a></li>
+      <li><a href="https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page">Wiki Functions - Coding help and examples</a></li>
+      <li><a href="https://www.wikibooks.org/">WikiBooks - A Collection of Free TextBooks</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/Main_Page">Wiki Commons - a collection of 150,334,048 freely usable media files</a></li>
+      <li><a href="https://www.wikivoyage.org/">Wiki Voyage - Free Travel Guides</a></li>
+      <li><a href="https://species.wikimedia.org/wiki/Main_Page">Wikispecies - Wiki about Life on this rock</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+      <li class="placeholder"><a href=" ">Name</a></li>
+    </ul>
+
+    <h2 id="general">General web search</h2>
+    <ul class="cat">
+      <li><a href="https://www.baidu.com/">Baidu</a> - Chinese-language web search, Baidu's own index; the dominant search engine in China</li>
+      <li><a href="https://search.brave.com/">Brave Search</a> - Multilingual; Brave's own independent index, privacy-focused</li>
+      <li><a href="https://www.dogpile.com/">Dogpile</a> - English metasearch engine; combines results from multiple engines</li>
+      <li><a href="https://duckduckgo.com/">DuckDuckGo</a> - Multilingual; results from multiple sources, known for not tracking users</li>
+      <li><a href="https://www.ecosia.org/">Ecosia</a> - Multilingual; powered by Google and Microsoft Bing, ad revenue funds tree planting</li>
+      <li><a href="https://www.excite.com/">Excite</a> - Multilingual web portal and search, powered by Microsoft Bing</li>
+      <li><a href="https://www.google.com/">Google</a> - Multilingual; Google's own index, the world's most used search engine</li>
+      <li><a href="https://kagi.com/">Kagi</a> - English; metasearch combined with Kagi's own index, paid and ad-free</li>
+      <li><a href="https://www.lycos.com/">Lycos</a> - Multilingual web portal and search, powered by Microsoft Bing</li>
+      <li><a href="https://www.metacrawler.com/">MetaCrawler</a> - English metasearch engine; blends results from several engines</li>
+      <li><a href="https://www.bing.com/">Microsoft Bing</a> - Multilingual; Microsoft's own index</li>
+      <li><a href="https://www.mojeek.com/">Mojeek</a> - Multilingual; Mojeek's own independent index, privacy-focused</li>
+      <li><a href="https://www.petalsearch.com/">Petal</a> - Multilingual; Huawei's search engine</li>
+      <li><a href="https://www.qwant.com/">Qwant</a> - Multilingual; powered by Microsoft Bing, privacy-focused, based in France</li>
+      <li><a href="https://www.sogou.com/">Sogou</a> - Chinese-language search from Tencent</li>
+      <li><a href="https://www.startpage.com/">Startpage</a> - English; delivers Google results with privacy protections</li>
+      <li><a href="https://swisscows.com/">Swisscows</a> - Multilingual; powered by Microsoft Bing, family-friendly and privacy-focused</li>
+      <li><a href="https://www.webcrawler.com/">WebCrawler</a> - English; one of the oldest web search engines, powered by Microsoft Bing</li>
+      <li><a href="https://search.yahoo.com/">Yahoo! Search</a> - Multilingual; powered by Microsoft Bing</li>
+      <li><a href="https://yandex.com/">Yandex</a> - Multilingual; Yandex's own index, Russia's largest search engine</li>
+      <li><a href="https://yep.com/">Yep</a> - English; Ahrefs' search engine with its own index</li>
+      <li><a href="https://you.com/">You.com</a> - English; powered by Microsoft Bing, with AI chat features</li>
+    </ul>
+    <h2 id="open-source">Open Source</h2>
+    <ul class="cat">
+      <li><a href="https://www.elastic.co/">Elasticsearch</a> - Multilingual; Elastic License / SSPL / AGPL</li>
+      <li><a href="https://opensearch.org/">OpenSearch</a> - Multilingual; Apache License 2.0</li>
+      <li><a href="https://yacy.net/">YaCy</a> - Multilingual; GNU GPL-2.0-or-later; free decentralized peer-to-peer search</li>
+      <li><a href="https://search.marginalia.nu/">Marginalia</a> - English (experimental Swedish, German, French); GNU AGPL</li>
+    </ul>
+    <h2 id="localized">Geographically localized</h2>
+    <ul class="cat">
+      <li><a href="https://search.biglobe.ne.jp/">BIGLOBE</a> - Japanese - Japan</li>
+      <li><a href="https://search.daum.net/">Daum</a> - Korean - Korea</li>
+      <li><a href="https://search.nate.com/">Nate</a> - Korean - Korea</li>
+      <li><a href="https://www.egerin.com/">Egerin</a> - Kurdish - Sweden</li>
+      <li><a href="https://www.fireball.de/">Fireball</a> - German, English - Germany</li>
+      <li><a href="https://search.goo.ne.jp/">Goo</a> - Japanese - Japan</li>
+      <li><a href="https://leit.is/">Leit.is</a> - Icelandic, English - Iceland</li>
+      <li><a href="https://www.najdi.si/">Najdi.si</a> - Slovenian - Slovenia</li>
+      <li><a href="https://search.naver.com/">Naver</a> - Korean - Korea</li>
+      <li><a href="https://en.wikipedia.org/wiki/Parsijoo">Parsijoo</a> - Persian - Iran (defunct)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Pipilika">Pipilika</a> - Bengali, English - Bangladesh (defunct)</li>
+      <li><a href="https://nova.rambler.ru/search">Rambler</a> - Russian - Russia</li>
+      <li><a href="https://search.rediff.com/">Rediff</a> - India</li>
+      <li><a href="https://pesquisa.sapo.pt/">SAPO</a> - Portuguese - Portugal</li>
+      <li><a href="https://search.ch/">Search.ch</a> - Switzerland</li>
+      <li><a href="https://en.wikipedia.org/wiki/Sesam">Sesam</a> - Norway, Sweden (defunct)</li>
+      <li><a href="https://search.seznam.cz/">Seznam</a> - Czech - Czech Republic</li>
+      <li><a href="https://www.walla.co.il/">Walla!</a> - Israel</li>
+      <li><a href="https://search.yahoo.co.jp/">Yahoo Japan</a> - Japanese - Japan (Google backend)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Yongzin">Yongzin</a> - Tibetan - China</li>
+    </ul>
+    <h2 id="business">Business</h2>
+    <ul class="cat">
+      <li><a href="https://www.business.com/">Business.com</a> - Business directory and resources</li>
+      <li><a href="https://www.dailystocks.com/">Daily Stocks</a> - Stock market data and quotes</li>
+      <li><a href="https://www.globalspec.com/">GlobalSpec</a> - Engineering and industrial product search</li>
+      <li><a href="https://www.thomasnet.com/">Thomasnet</a> - US industrial supplier directory</li>
+      <li><a href="https://www.justdial.com/">Justdial</a> - Indian local business search</li>
+    </ul>
+    <h2 id="computers">Computers</h2>
+    <ul class="cat">
+      <li><a href="https://www.shodan.io/">Shodan</a> - Search engine for Internet-connected devices</li>
+    </ul>
+    <h2 id="content">Content</h2>
+    <ul class="cat">
+      <li><a href="https://openverse.org/">Openverse</a> - Search engine for openly licensed content</li>
+    </ul>
+    <h2 id="dark-web">Dark web</h2>
+    <ul class="cat">
+      <li><a href="https://ahmia.fi/">Ahmia</a> - Search engine for Tor hidden services</li>
+    </ul>
+    <h2 id="education">Education</h2>
+    <ul class="cat">
+      <li><a href="https://www.base-search.net/">BASE</a> - Bielefeld Academic Search Engine</li>
+      <li><a href="https://scholar.google.com/">Google Scholar</a> - Scholarly literature search</li>
+      <li><a href="https://scholar.archive.org/">Internet Archive Scholar</a> - Scholarly full-text search from the Internet Archive</li>
+      <li><a href="https://www.loc.gov/">Library of Congress</a> - US national library catalog search</li>
+      <li><a href="https://www.semanticscholar.org/">Semantic Scholar</a> - Academic paper search</li>
+    </ul>
+    <h2 id="enterprise">Enterprise</h2>
+    <ul class="cat">
+      <li><a href="https://solr.apache.org/">Apache Solr</a> - Open-source enterprise search platform</li>
+      <li><a href="https://www.oracle.com/search/">Oracle Secure Enterprise Search</a> - Oracle's enterprise search product</li>
+      <li><a href="https://www.q-sensei.com/">Q-Sensei</a> - Q-Sensei Enterprise search</li>
+      <li><a href="https://swiftype.com/">Swiftype</a> - Swiftype Search, now Elastic Site Search</li>
+      <li><a href="https://en.wikipedia.org/wiki/TeraText">TeraText</a> - TeraText Suite enterprise search</li>
+    </ul>
+    <h2 id="events">Events</h2>
+    <ul class="cat">
+      <li><a href="https://www.tickex.com/">Tickex</a> - Event tickets, US and UK (defunct)</li>
+      <li><a href="https://www.tickx.com/">TickX</a> - Event tickets, UK, Ireland, Spain, Netherlands</li>
+    </ul>
+    <h2 id="food">Food and recipes</h2>
+    <ul class="cat">
+      <li><a href="https://en.wikipedia.org/wiki/RecipeBridge">RecipeBridge</a> - Vertical search engine for recipes (now defunct)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Yummly">Yummly</a> - Semantic recipe search (now defunct)</li>
+    </ul>
+    <h2 id="genealogy">Genealogy</h2>
+    <ul class="cat">
+      <li><a href="https://www.mocavo.com/">Mocavo</a> - Family history search engine (absorbed into Findmypast)</li>
+    </ul>
+    <h2 id="job">Job</h2>
+    <ul class="cat">
+      <li><a href="https://www.adzuna.com/">Adzuna</a> - Job search (UK)</li>
+      <li><a href="https://www.careerbuilder.com/">CareerBuilder</a> - Job search (US)</li>
+      <li><a href="https://www.craigslist.org/">Craigslist</a> - Classifieds and jobs, by city</li>
+      <li><a href="https://www.dice.com/">Dice</a> - Tech job search (US)</li>
+      <li><a href="https://www.glassdoor.com/">Glassdoor</a> - Jobs and company reviews (US)</li>
+      <li><a href="https://www.indeed.com/">Indeed</a> - Job search (US)</li>
+      <li><a href="https://www.jobstreet.com/">JobStreet</a> - Jobs, Southeast Asia, Japan, India</li>
+      <li><a href="https://www.monster.com/">Monster</a> - Job search (US, India)</li>
+      <li><a href="https://www.naukri.com/">Naukri</a> - Job search (India)</li>
+      <li><a href="https://en.wikipedia.org/wiki/HotJobs">Yahoo! HotJobs</a> - Country-wise subdomains, international (defunct)</li>
+    </ul>
+    <h2 id="legal">Legal</h2>
+    <ul class="cat">
+      <li><a href="https://patents.google.com/">Google Patents</a> - Patent search</li>
+      <li><a href="https://scholar.google.com/">Google Scholar</a> - Includes case law search</li>
+      <li><a href="https://www.lexisnexis.com/">Lexis</a> - LexisNexis legal research</li>
+      <li><a href="https://www.lexisnexis.ca/">Quicklaw</a> - Canadian legal research</li>
+      <li><a href="https://legal.thomsonreuters.com/en/products/westlaw">Westlaw</a> - Legal research, Thomson Reuters</li>
+    </ul>
+    <h2 id="medical">Medical</h2>
+    <ul class="cat">
+      <li><a href="https://www.bing.com/health">Bing Health</a> - Bing's health search (retired)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Bioinformatic_Harvester">Bioinformatic Harvester</a> - Bioinformatics literature and resources</li>
+      <li><a href="https://www.citeab.com/">CiteAb</a> - Antibody search engine for medical researchers</li>
+      <li><a href="https://www.ebi.ac.uk/ebisearch">EB-eye</a> - EMBL-EBI's search engine</li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/search/">Entrez</a> - NCBI search, includes PubMed</li>
+      <li><a href="https://www.genieknows.com/">GenieKnows</a> - Health and local search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Healia">Healia</a> - Health search (defunct)</li>
+      <li><a href="https://www.healthline.com/">Healthline</a> - Health information search</li>
+      <li><a href="https://www.nextbio.com/">Nextbio</a> - Life science search engine</li>
+      <li><a href="https://en.wikipedia.org/wiki/PubGene">PubGene</a> - Biomedical literature network</li>
+      <li><a href="https://www.searchmedica.com/">Searchmedica</a> - Medical search for professionals</li>
+      <li><a href="https://www.webmd.com/">WebMD</a> - Health information and symptom search</li>
+    </ul>
+    <h2 id="mobile">Mobile/handheld</h2>
+    <ul class="cat">
+      <li><a href="https://en.wikipedia.org/wiki/Taganode">Taganode</a> - Local search engine (now defunct)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Taptu">Taptu</a> - Mobile/social search (now defunct)</li>
+    </ul>
+    <h2 id="news">News</h2>
+    <ul class="cat">
+      <li><a href="https://www.bing.com/news">Bing News</a> - News search</li>
+      <li><a href="https://news.google.com/">Google News</a> - News search and aggregation</li>
+      <li><a href="https://dailyhunt.in/">Dailyhunt</a> - News (India)</li>
+      <li><a href="https://www.priyo.com/">Priyo</a> - Bengali news and portal</li>
+      <li><a href="https://news.yahoo.com/">Yahoo! News</a> - News search and aggregation</li>
+    </ul>
+    <h2 id="people">People</h2>
+    <ul class="cat">
+      <li><a href="https://www.whitepages.com/">Whitepages</a> - People and phone search</li>
+      <li><a href="https://en.wikipedia.org/wiki/FindFace">FindFace</a> - Facial recognition search (shut down)</li>
+      <li><a href="https://www.peekyou.com/">PeekYou</a> - People search</li>
+      <li><a href="https://www.spokeo.com/">Spokeo</a> - People search</li>
+      <li><a href="https://www.zabasearch.com/">Zabasearch</a> - People search</li>
+      <li><a href="https://www.zoominfo.com/">ZoomInfo</a> - Business people and company search</li>
+    </ul>
+    <h2 id="real-estate">Real estate/property</h2>
+    <ul class="cat">
+      <li><a href="https://hotpads.com/">HotPads</a> - Rentals and property search</li>
+      <li><a href="https://www.realtor.com/">Realtor.com</a> - Property listings</li>
+      <li><a href="https://www.redfin.com/">Redfin</a> - Property listings</li>
+      <li><a href="https://www.rightmove.co.uk/">Rightmove</a> - UK property listings</li>
+      <li><a href="https://sturents.com/">StuRents</a> - Student rentals</li>
+      <li><a href="https://www.trulia.com/">Trulia</a> - Property listings</li>
+      <li><a href="https://www.zillow.com/">Zillow</a> - Property listings</li>
+      <li><a href="https://www.zoopla.co.uk/">Zoopla</a> - UK property listings</li>
+    </ul>
+    <h2 id="television">Television</h2>
+    <ul class="cat">
+      <li><a href="https://en.wikipedia.org/wiki/TV_Genius">TV Genius</a> - TV guide search (defunct)</li>
+    </ul>
+    <h2 id="video">Video</h2>
+    <ul class="cat">
+      <li><a href="https://sepiasearch.org/">Sepia Search</a> - PeerTube video search</li>
+    </ul>
+    <h2 id="video-games">Video games</h2>
+    <ul class="cat">
+      <li><a href="https://wazap.com/">Wazap</a> - Japanese video game search</li>
+    </ul>
+    <h2 id="datasets">Datasets</h2>
+    <ul class="cat">
+      <li><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a> - Search for datasets</li>
+    </ul>
+    <h2 id="maps">Maps</h2>
+    <ul class="cat">
+      <li><a href="https://map.baidu.com/">Baidu Maps</a> - Maps, China</li>
+      <li><a href="https://www.bing.com/maps">Bing Maps</a> - Maps and directions</li>
+      <li><a href="https://www.geoportail.gouv.fr/">Géoportail</a> - French national mapping portal</li>
+      <li><a href="https://maps.google.com/">Google Maps</a> - Maps and directions</li>
+      <li><a href="https://www.mapquest.com/">MapQuest</a> - Maps and directions</li>
+      <li><a href="https://wego.here.com/">Nokia Maps</a> - Now HERE WeGo</li>
+      <li><a href="https://www.openstreetmap.org/">OpenStreetMap</a> - Open collaborative maps</li>
+      <li><a href="https://www.petalmaps.com/">Petal Maps</a> - Huawei maps</li>
+      <li><a href="https://www.qwant.com/">Qwant Maps</a> - Qwant Maps (defunct)</li>
+      <li><a href="https://map.qq.com/">Tencent Maps</a> - Maps, China</li>
+      <li><a href="https://www.wikiloc.com/">Wikiloc</a> - Outdoor trails and maps</li>
+      <li><a href="https://wikimapia.org/">WikiMapia</a> - Wiki-described places on maps</li>
+      <li><a href="https://en.wikipedia.org/wiki/Yahoo!_Maps">Yahoo! Maps</a> - Maps (discontinued)</li>
+      <li><a href="https://yandex.com/maps">Yandex Maps</a> - Maps and directions</li>
+      <li><a href="https://www.mapmyindia.com/">MapmyIndia</a> - Maps, India (now Mappls)</li>
+    </ul>
+    <h2 id="multimedia">Multimedia</h2>
+    <ul class="cat">
+      <li><a href="https://www.bing.com/videos">Bing Videos</a> - Video search</li>
+      <li><a href="https://www.blinkx.com/">blinkx</a> - Video search</li>
+      <li><a href="https://www.findsounds.com/">FindSounds</a> - Sound effects search</li>
+      <li><a href="https://images.google.com/">Google Images</a> - Image search</li>
+      <li><a href="https://video.google.com/">Google Video</a> - Video search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Munax">Munax's PlayAudioVideo</a> - Multimedia search</li>
+      <li><a href="https://openverse.org/">Openverse</a> - Search engine for open content</li>
+      <li><a href="https://en.wikipedia.org/wiki/Podscope">Podscope</a> - Podcast search (defunct)</li>
+      <li><a href="https://en.wikipedia.org/wiki/SeeqPod">SeeqPod</a> - Music search (defunct)</li>
+      <li><a href="https://sepiasearch.org/">Sepia Search</a> - PeerTube video search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Songza">Songza</a> - Music playlists (defunct)</li>
+      <li><a href="https://v.qq.com/">Tencent Video</a> - Video, China</li>
+      <li><a href="https://tineye.com/">TinEye</a> - Reverse image search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Veveo">Veveo</a> - Video search (defunct)</li>
+      <li><a href="https://video.search.yahoo.com/">Yahoo! Video</a> - Yahoo video search</li>
+    </ul>
+    <h2 id="price">Price</h2>
+    <ul class="cat">
+      <li><a href="https://www.bing.com/shop">Bing Shopping</a> - Price comparison</li>
+      <li><a href="https://www.shopping.google.com/">Google Shopping</a> - Price comparison (formerly Google Product Search and Froogle)</li>
+      <li><a href="https://www.idealo.co.uk/">Idealo</a> - Price comparison</li>
+      <li><a href="https://www.kelkoo.com/">Kelkoo</a> - Price comparison</li>
+      <li><a href="https://www.mysimon.com/">MySimon</a> - Price comparison</li>
+      <li><a href="https://www.pricegrabber.com/">PriceGrabber</a> - Price comparison</li>
+      <li><a href="https://www.pricerunner.com/">PriceRunner</a> - Price comparison</li>
+      <li><a href="https://www.pronto.com/">Pronto.com</a> - Price comparison</li>
+      <li><a href="https://www.shopping.com/">Shopping.com</a> - Price comparison</li>
+      <li><a href="https://www.shopzilla.com/">Shopzilla</a> - Price comparison</li>
+      <li><a href="https://www.tickx.com/">TickX</a> - Ticket price comparison</li>
+    </ul>
+    <h2 id="source-code">Source code</h2>
+    <ul class="cat">
+      <li><a href="https://cs.opensource.google.com/">Google Code Search</a> - Code search across Google open source</li>
+      <li><a href="https://en.wikipedia.org/wiki/Koders">Koders</a> - Source code search (merged into Open Hub)</li>
+      <li><a href="https://www.krugle.com/">Krugle</a> - Source code search</li>
+    </ul>
+    <h2 id="bittorrent">BitTorrent</h2>
+    <ul class="cat">
+      <li><a href="https://btdigg.org/">BTDigg</a> - BitTorrent search across the DHT network</li>
+      <li><a href="https://en.wikipedia.org/wiki/IsoHunt">Isohunt</a> - Discontinued</li>
+      <li><a href="https://en.wikipedia.org/wiki/Mininova">Mininova</a> - Discontinued</li>
+      <li><a href="https://thepiratebay.org/">The Pirate Bay</a> - BitTorrent search</li>
+      <li><a href="https://en.wikipedia.org/wiki/TorrentSpy">TorrentSpy</a> - Discontinued</li>
+      <li><a href="https://en.wikipedia.org/wiki/Torrentz">Torrentz</a> - Discontinued</li>
+    </ul>
+    <h2 id="blog">Blog</h2>
+    <ul class="cat">
+      <li><a href="https://en.wikipedia.org/wiki/Amatomu">Amatomu</a> - South African blog search (defunct)</li>
+      <li><a href="https://www.bloglines.com/">Bloglines</a> - Blog reader and search</li>
+      <li><a href="https://www.icerocket.com/">IceRocket</a> - Blog search</li>
+      <li><a href="https://search.marginalia.nu/">Marginalia</a> - Blog and small-web search</li>
+      <li><a href="https://www.mojeek.com/">Mojeek</a> - Substack-only blog search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Munax">Munax</a> - Blog and multimedia search</li>
+      <li><a href="https://en.wikipedia.org/wiki/Regator">Regator</a> - Blog search (defunct)</li>
+      <li><a href="https://technorati.com/">Technorati</a> - Blog search</li>
+    </ul>
+    <h2 id="appliances">Search appliances</h2>
+    <ul class="cat">
+      <li><a href="https://www.fabasoft.com/">Fabasoft</a> - Search appliance</li>
+      <li><a href="https://en.wikipedia.org/wiki/Searchdaimon">Searchdaimon</a> - Open-source search appliance</li>
+      <li><a href="https://www.thunderstone.com/">Thunderstone</a> - Texis search appliance</li>
+    </ul>
+  </div>
+  <a href="https://muse.ai" title="Muse"><img src="ai-footer.jpg" alt="Various friendly AI beings holding open doors along a path" style="display:block; width:100%; max-width:1200px; margin:1.5rem auto 0; border-radius:10px;"></a>
+</body>
+</html>
