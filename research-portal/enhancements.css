@@ -1,0 +1,17 @@
+
+/* Additive presentation layer: original stylesheet remains intact. */
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{overflow-wrap:anywhere}
+.new-nav{text-align:center;padding:.65rem;background:#e7f1fa}.new-nav a{display:inline-block;margin:0 .5rem;color:#075985}
+.edition{font-size:.9rem;color:#475569}.editor-note{padding:1rem;border-left:4px solid #b7791f;background:#fffbeb;margin:1rem 0}
+.addition{border-top:3px solid #0f766e}.addition h2{color:#075985}.resource-grid,.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:1rem}
+.resource-grid article,.flow>div{padding:1rem;background:#f0f7fa;border:1px solid #d4e3ec;border-radius:6px}.resource-grid article h3{margin-top:0}
+.tag{display:inline-block;background:#e0f2f1;color:#115e59;border-radius:4px;padding:.1rem .5rem;font-size:.8rem}
+.prompt-card{padding:1rem 0;border-bottom:1px solid #cbd5e1}.prompt-card[hidden]{display:none}
+label{display:block;font-weight:600;margin:.7rem 0 .3rem}input,select{display:block;width:100%;padding:.7rem;border:1px solid #64748b;border-radius:4px;font:inherit;background:white;color:#1e293b}
+button{padding:.65rem 1rem;margin:.5rem 0;border:0;border-radius:4px;background:#075985;color:white;font:inherit;cursor:pointer}button:hover{background:#0c4a6e}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d97706;outline-offset:3px}
+.table-wrap{overflow-x:auto}.table-wrap table{min-width:520px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+.skip-link{position:absolute;left:1rem;top:-100px;z-index:2000;background:white;padding:1rem}.skip-link:focus{top:1rem}
+section,[id]{scroll-margin-top:12rem}footer a{color:#bae6fd}.page-toc{padding:.8rem 1rem;background:#edf5fa;border-radius:5px}.page-toc summary{cursor:pointer;font-weight:600}
+@media(max-width:650px){nav{position:static!important}main{padding:1rem .75rem!important}section{padding:1rem!important}h1{font-size:1.6rem!important}.flow,.resource-grid{grid-template-columns:1fr}section,[id]{scroll-margin-top:1rem}}
+@media print{nav,.new-nav,.skip-link,button,.page-toc{display:none}section{box-shadow:none;break-inside:auto}body{background:white}main{max-width:none}pre{color:#111;background:#f1f5f9}}

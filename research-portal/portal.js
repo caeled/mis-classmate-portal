@@ -1,0 +1,16 @@
+
+'use strict';
+document.addEventListener('DOMContentLoaded',()=>{
+  // All original content remains readable without JavaScript.
+  document.querySelectorAll('table').forEach(table=>{if(!table.parentElement.classList.contains('table-wrap')){const wrap=document.createElement('div');wrap.className='table-wrap';table.before(wrap);wrap.append(table);}});
+  document.querySelectorAll('a[target="_blank"]').forEach(a=>{a.rel='noopener noreferrer';});
+  const main=document.querySelector('main');
+  if(main){const headings=[...main.querySelectorAll('h2')];if(headings.length>3){const toc=document.createElement('details');toc.className='page-toc';const summary=document.createElement('summary');summary.textContent='On this page';toc.append(summary);const list=document.createElement('ul');headings.forEach((h,i)=>{if(!h.id)h.id='section-'+i;const li=document.createElement('li');const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;li.append(a);list.append(li);});toc.append(list);main.prepend(toc);}}
+  const filter=document.getElementById('prompt-filter');
+  if(filter){const cards=[...document.querySelectorAll('.prompt-card')];const update=()=>{const q=filter.value.trim().toLowerCase();let n=0;cards.forEach(c=>{c.hidden=!c.textContent.toLowerCase().includes(q);if(!c.hidden)n++;});document.getElementById('prompt-count').textContent=n+' of '+cards.length+' templates shown';};filter.addEventListener('input',update);update();}
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const el=document.getElementById(b.dataset.copy);const status=document.getElementById('copy-status');try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(el.textContent);status.textContent='Prompt copied.';}catch{const range=document.createRange();range.selectNodeContents(el);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='Prompt selected. Press Ctrl+C (or Command+C) to copy.';}}));
+  const search=document.getElementById('research-search');
+  if(search)search.addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('research-query').value.trim();if(!q)return;const urls={scholar:'https://scholar.google.com/scholar?q=',semantic:'https://www.semanticscholar.org/search?q=',crossref:'https://search.crossref.org/?q=',wiki:'https://en.wikipedia.org/w/index.php?search=',arxiv:'https://arxiv.org/search/?searchtype=all&query='};const base=urls[document.getElementById('research-engine').value];if(base)window.location.assign(base+encodeURIComponent(q));});
+  const cost=document.getElementById('cost-form');
+  if(cost)cost.addEventListener('submit',e=>{e.preventDefault();const ids=['requests','input-tokens','output-tokens','input-price','output-price'];const vals=ids.map(id=>Number(document.getElementById(id).value));const out=document.getElementById('cost-result');if(vals.some(v=>!Number.isFinite(v)||v<0)){out.textContent='Enter finite, nonnegative values.';return;}const[n,it,ot,ip,op]=vals;const total=n*(it*ip+ot*op)/1e6;out.textContent=Number.isFinite(total)?'Estimated token cost: $'+total.toFixed(2)+' USD. See exclusions below.':'Values are too large to calculate. Enter smaller values.';});
+});

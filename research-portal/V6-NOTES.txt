@@ -1,0 +1,43 @@
+STUDENT RESEARCH PORTAL — v6 NOTES (Muse pass, 3 November 2026)
+
+Basis: v5 (GPT expanded edition, 29 root pages + synchronized copilot/ copy).
+Method: add-only. No v5 content was deleted or rewritten.
+
+ADDED
+1. launchpad.html — "MIS Launchpad: For students starting an MIS program."
+   Fills the gaps the v5 expansion did not cover, from Steven's Launchpad outline:
+   - MIS = People + Technology + Business; Business Problem → Data → Analysis →
+     Dashboard → Decision pipeline; MIS vs CS vs Analytics table; start checklist.
+   - 7-Day Quick Start (Days 1-2 orientation, 3-4 SQL/Excel, Day 5 two MIS
+     Quarterly abstracts, Day 6 pick a research question, Day 7 one mini-project).
+   - Section 1 What is MIS · Section 2 semester Roadmap with elective tracks
+     (data / security / building / leading) · Section 3 Research Topics: all 12
+     of Steven's topics (Data & AI 4, Systems 3, People 5), each with a working
+     research question and method, plus the [Tech]+[Outcome]+[Context] paper
+     template · Section 4 Library: MIS Quarterly, ISR, JMIS, JAIS, HBR, Sloan
+     Review, free sources, and the 15-minute reading method · Section 5 Skills
+     Lab: SQL progression ending in the Chinook project, Excel→BI, Python path,
+     certification list · Section 6 Careers: Steven's salary bands with a
+     "first proof to build" column, and a fill-in internship outreach email
+     template · Section 7 Workspace: Saved topics / Tasks / Notes system, linked
+     to the Research Workbench evidence matrix.
+   - Where Steven's outline pointed to detail "in the attached file" (elective
+     track details, the 12 topics' full questions and methods, the internship
+     email template), that file was not inside the v5 ZIP; those details were
+     composed by Muse to fit the outline and are marked by this note as the
+     place to review first.
+2. Navigation: an "MIS Launchpad" link added to the nav of all 29 existing
+   pages, immediately after Career Paths.
+3. index.html: a featured "New to MIS? Start with the Launchpad" section
+   placed ahead of Portal Overview.
+4. copilot/: fully re-synchronized with root, including launchpad.html.
+
+VALIDATION (this pass)
+- All 60 HTML files (30 root + 30 copilot) parse with balanced tags and
+  closed documents.
+- launchpad.html is linked from every page's nav; its in-page section
+  anchors (#what-is-mis, #roadmap, #research-topics, #library, #skills-lab,
+  #careers, #workspace) all resolve.
+- Root and copilot/ HTML files are byte-identical.
+- Salary figures are Steven's outline numbers, labeled on the page as
+  planning bands, not offers.

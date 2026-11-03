@@ -1,0 +1,21 @@
+VALIDATION — 3 November 2026
+
+29 root HTML pages; matching complete copy under copilot/ (58 HTML files).
+All content sections from the 11 original root pages preserved verbatim.
+1,320 local link/asset references checked; no missing files or static fragments.
+No duplicate static IDs detected. Root and copilot/ files match.
+JavaScript syntax check passed.
+Headless Chromium: all 29 pages checked at 1440px and 390px widths.
+No document-width overflow, empty links, duplicate H1s, or page script errors.
+Prompt filter: matching query, no results, and reset passed.
+Copy button: successful copy or selection fallback verified.
+Token estimator: example $4.50 and zero-request $0.00 cases passed.
+All five external search destinations and query encoding passed using intercepted
+navigations; no external query was submitted during the browser test.
+Representative provider content remains available with JavaScript disabled.
+Desktop AI-hub and mobile prompt-template screenshots visually reviewed.
+
+External-source limitations are documented in review-notes.html.
+This is not a full external-link audit, accessibility certification, or live-model
+benchmark. Original external destinations were preserved, including older links.
+No hosting deployment was performed; the archive is prepared for user deployment.

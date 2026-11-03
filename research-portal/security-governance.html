@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security and Governance - MIS Degree</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css"><script src="portal.js" defer></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+    <h1>Security and Governance</h1>
+    <p>Protecting Information, Ensuring Compliance, and Managing Systemic Risk</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cultural-differences.html">Cultural Differences</a></li>
+        <li><a href="resources.html">Wiki & Libraries</a></li>
+        <li><a href="prompt-library.html">Prompt Library</a></li>
+        <li><a href="microsoft-ecosystem.html">Microsoft Ecosystem</a></li>
+        <li><a href="google-ecosystem.html">Google Ecosystem</a></li>
+        <li><a href="ai-ecosystems-comparison.html">AI Ecosystems</a></li>
+        <li><a href="enterprise-architecture.html">Enterprise Architecture</a></li>
+        <li><a href="digital-transformation-case-studies.html">Case Studies</a></li>
+        <li><a href="security-governance.html" class="active">Security & Governance</a></li>
+        <li><a href="career-paths.html">Career Paths</a></li><li><a href="launchpad.html">MIS Launchpad</a></li>
+    </ul>
+</nav><div class="new-nav"><a href="ai-research-hub.html">AI Deep Dive</a> · <a href="research-workbench.html">Research Workbench</a> · <a href="review-notes.html">Review notes</a></div>
+
+<main id="main"><p class="edition">Expanded research edition · 3 November 2026 · <a href="#v5-additions">Jump to additions ↓</a></p><aside class="editor-note"><strong>Research note:</strong> Read the added source and controls section for qualifications to the original legal summaries, RAG claims, and provenance terminology.</aside>
+
+<section>
+
+<h2>Why Security Matters in MIS</h2>
+
+<p>
+Management Information Systems depend on trustworthy, authentic, and confidential data.
+If information is stolen, altered, lost, or made unavailable, core operations halt and executive
+decisions are severely compromised.
+</p>
+
+<p>
+Security and governance provide the strategic controls, technical defenses, and oversight frameworks
+necessary to mitigate risk and maintain regulatory compliance.
+</p>
+
+</section>
+
+<section>
+
+<h2>The CIA Security Triad</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Principle</th>
+<th>Definition</th>
+<th>Key Controls</th>
+</tr>
+
+<tr>
+<td>Confidentiality</td>
+<td>Only authorized users, systems, and processes can view sensitive data.</td>
+<td>End-to-end encryption (AES-256), Role-Based Access Control (RBAC), Data Loss Prevention (DLP)</td>
+</tr>
+
+<tr>
+<td>Integrity</td>
+<td>Information remains complete, unaltered, and protected against unauthorized tampering.</td>
+<td>Cryptographic hashing (SHA-256), digital signatures, database transaction ACID logs</td>
+</tr>
+
+<tr>
+<td>Availability</td>
+<td>Systems, networks, and applications are reliably accessible to authorized users when needed.</td>
+<td>Geographic cloud redundancy, automated failover, DDoS mitigation (<a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>), RAID storage</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Information Security Threats & Threat Vectors</h2>
+
+<ul>
+<li><strong>Malware & Ransomware:</strong> Malicious software encrypting corporate assets for extortion. Tracked by <a href="https://attack.mitre.org/" target="_blank">MITRE ATT&CK Framework</a>.</li>
+<li><strong>Phishing & Social Engineering:</strong> Deceptive campaigns harvesting credentials and bypassing perimeter defenses.</li>
+<li><strong>Credential Theft & Account Takeover:</strong> Exploitation of compromised or reused passwords. Mitigated by FIDO2 WebAuthn keys.</li>
+<li><strong>Insider Threats:</strong> Unauthorized data exfiltration or system sabotage by internal employees or contractors.</li>
+<li><strong>Cloud Misconfiguration:</strong> Insecure S3 buckets, exposed ports, and overly permissive IAM roles.</li>
+<li><strong>Supply Chain Attacks:</strong> Compromises in third-party libraries and vendor software dependencies.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Identity and Access Management (IAM)</h2>
+
+<p>
+Identity is the new perimeter in modern distributed and cloud environments.
+Organizations must enforce strict authentication and granular authorization.
+</p>
+
+<h3>Core IAM Concepts & Tools</h3>
+
+<ul>
+<li><strong>Authentication (AuthN):</strong> Verifying user identity via <a href="https://fidoalliance.org/" target="_blank">FIDO2 / WebAuthn</a> and Multi-Factor Authentication (MFA).</li>
+<li><strong>Authorization (AuthZ):</strong> Granting granular permissions via Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC).</li>
+<li><strong>Single Sign-On (SSO):</strong> Federated authentication protocols including <a href="https://openid.net/developers/how-connect-works/" target="_blank">OpenID Connect (OIDC)</a> and <a href="https://www.oasis-open.org/standards/#samlv2.0" target="_blank">SAML 2.0</a>.</li>
+<li><strong>Enterprise Identity Providers:</strong> Centralized directories managed by <a href="https://www.microsoft.com/security/business/identity-access/microsoft-entra-id" target="_blank">Microsoft Entra ID</a> and <a href="https://www.okta.com/" target="_blank">Okta</a>.</li>
+<li><strong>Conditional Access:</strong> Dynamic evaluation of user risk score, device health, and geographic location before granting access.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Zero Trust Security Architecture</h2>
+
+<p>
+Zero Trust replaces implicit network trust with an explicit, continuous verification mandate:
+</p>
+
+<blockquote>
+Never trust. Always verify. Assume breach.
+</blockquote>
+
+<p>
+Published and standardized by the National Institute of Standards and Technology in 
+<a href="https://csrc.nist.gov/pubs/sp/800/207/final" target="_blank">NIST SP 800-207: Zero Trust Architecture</a>.
+</p>
+
+<h3>Three Fundamental Zero Trust Principles</h3>
+
+<ul>
+<li><strong>Verify Explicitly:</strong> Always authenticate and authorize based on all available data points (identity, location, device health, service or workload).</li>
+<li><strong>Use Least Privilege Access:</strong> Limit user access with Just-In-Time (JIT) and Just-Enough-Access (JEA) models to protect data and productivity.</li>
+<li><strong>Assume Breach:</strong> Minimize blast radius through network micro-segmentation, encryption in transit and at rest, and automated threat detection.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Industry Governance Frameworks & Standards</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Framework</th>
+<th>Publishing Body</th>
+<th>Primary Focus & Official Documentation</th>
+</tr>
+
+<tr>
+<td>NIST Cybersecurity Framework (CSF 2.0)</td>
+<td>National Institute of Standards and Technology</td>
+<td><a href="https://www.nist.gov/cyberframework" target="_blank">NIST CSF 2.0 Guidelines</a>: Govern, Identify, Protect, Detect, Respond, and Recover.</td>
+</tr>
+
+<tr>
+<td>ISO/IEC 27001</td>
+<td>International Organization for Standardization</td>
+<td><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank">ISO/IEC 27001 ISMS Standard</a>: Global benchmark for Information Security Management Systems.</td>
+</tr>
+
+<tr>
+<td>COBIT 2019</td>
+<td>ISACA</td>
+<td><a href="https://www.isaca.org/resources/cobit" target="_blank">ISACA COBIT Governance Model</a>: Connecting corporate governance goals to IT architectures.</td>
+</tr>
+
+<tr>
+<td>ITIL 4</td>
+<td>AXELOS</td>
+<td><a href="https://www.axelos.com/certifications/itil-service-management" target="_blank">ITIL ITSM Framework</a>: Managing the lifecycle of enterprise IT services and infrastructure.</td>
+</tr>
+
+<tr>
+<td>CIS Critical Security Controls</td>
+<td>Center for Internet Security</td>
+<td><a href="https://www.cisecurity.org/controls" target="_blank">CIS Controls v8</a>: Prioritized set of defensive technical actions against cyber threats.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Regulatory Compliance & Data Protection Laws</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Regulation / Law</th>
+<th>Jurisdiction</th>
+<th>Core Requirement</th>
+<th>Official Resource</th>
+</tr>
+
+<tr>
+<td>GDPR (General Data Protection Regulation)</td>
+<td>European Union</td>
+<td>Right to erasure, explicit consent, mandatory 72-hour breach notification</td>
+<td><a href="https://gdpr.eu/" target="_blank">GDPR Official Portal</a></td>
+</tr>
+
+<tr>
+<td>HIPAA (Health Insurance Portability & Accountability Act)</td>
+<td>United States</td>
+<td>Protection and privacy of Protected Health Information (PHI)</td>
+<td><a href="https://www.hhs.gov/hipaa/index.html" target="_blank">U.S. HHS HIPAA Rules</a></td>
+</tr>
+
+<tr>
+<td>CCPA / CPRA</td>
+<td>California, USA</td>
+<td>Consumer rights regarding the collection and sale of personal data</td>
+<td><a href="https://oag.ca.gov/privacy/ccpa" target="_blank">California Attorney General CCPA</a></td>
+</tr>
+
+<tr>
+<td>DPDP Act 2023</td>
+<td>India</td>
+<td>Digital Personal Data Protection framework for cross-border processing</td>
+<td><a href="https://www.meity.gov.in/" target="_blank">MeitY Official Portal</a></td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Artificial Intelligence Governance & Safety</h2>
+
+<p>
+The rapid enterprise deployment of generative AI has created urgent new governance demands:
+</p>
+
+<ul>
+<li><strong>AI Risk Management:</strong> Governed by the <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI RMF (Risk Management Framework)</a>.</li>
+<li><strong>Prompt Injection & Jailbreaking:</strong> Documented in the <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">OWASP Top 10 for Large Language Models</a>.</li>
+<li><strong>Data Leakage Prevention:</strong> Enforcing strict boundaries so confidential customer or code data is never ingested into public model training sets.</li>
+<li><strong>Hallucination & Provenance:</strong> Implementing strictly grounded Retrieval-Augmented Generation (RAG) and digital watermarking (<a href="https://c2pa.org/" target="_blank">C2PA Standard</a>).</li>
+<li><strong>European Union AI Act:</strong> The world's first comprehensive legal framework regulating AI systems by risk category (<a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act Overview</a>).</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Cloud Shared Responsibility Model</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Cloud Service Layer</th>
+<th>Cloud Provider Responsibility (e.g. Azure / AWS / GCP)</th>
+<th>Enterprise Customer Responsibility</th>
+</tr>
+
+<tr>
+<td>IaaS (Infrastructure as a Service)</td>
+<td>Physical datacenters, server hardware, hypervisors, and core cables</td>
+<td>Operating system patching, network firewalls, IAM roles, and application data</td>
+</tr>
+
+<tr>
+<td>PaaS (Platform as a Service)</td>
+<td>OS maintenance, database engine runtime, and hardware scaling</td>
+<td>Application code, API security configurations, and user authentication</td>
+</tr>
+
+<tr>
+<td>SaaS (Software as a Service)</td>
+<td>Application availability, underlying software code, and infrastructure</td>
+<td>User access permissions, data governance, and account credential security</td>
+</tr>
+
+</table>
+
+</section>
+
+<div id="v5-additions"><section class="addition"><h2>AI controls to test, not just name</h2><ul><li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a> — Organize risk ownership and evaluation across the AI lifecycle.</li><li><a href="https://genai.owasp.org/">OWASP GenAI Security Project</a> — Study prompt injection, excessive permissions, data exposure, and insecure output handling.</li><li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Official GDPR text</a> — Primary legal text; gdpr.eu, linked in the original page, is not the EU’s official portal.</li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">European Commission AI Act page</a> — Official starting point for applicability and implementation updates.</li></ul><ul><li>Enforce document permissions before retrieval; a prompt telling the model to ignore confidential data is not access control.</li><li>Treat retrieved pages and tool output as untrusted data. Validate tool arguments and require human review for consequential external actions.</li><li>Measure unsupported claims and citation accuracy. RAG and a citation requirement do not guarantee truth.</li><li>Check storage, retention, training use, region, subprocessors, and connector behavior for the exact service and contract. Local weights alone do not secure an application.</li><li>Content provenance can document an asset’s history; it does not prove that its factual claims are true.</li></ul><p>Research note: the original legal table is a simplified orientation, not a complete statement of obligations. Consent is not the only GDPR lawful basis; breach notification and erasure have conditions and exceptions. Consult the applicable primary text for a specific case.</p></section></div></main>
+
+<footer>
+    <p>&copy; 2026 Student Research Portal &ndash; Experience-Based MIS Degree</p>
+</footer>
+
+</body>
+</html>
