@@ -57,6 +57,56 @@
   h2 {
     scroll-margin-top: 1rem;
   }
+
+  .headtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  .headtable td {
+    vertical-align: top;
+    padding: 0.25rem;
+  }
+  .colside {
+    width: 22%;
+  }
+  .colmid {
+    width: 56%;
+    text-align: center;
+  }
+  .sidehead {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+  }
+  .soonlist {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .soonlist li {
+    border-bottom: none;
+    padding: 0.15rem 0;
+    color: #9a917e;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  .libbtn {
+    display: inline-block;
+    background: #f3ecd9;
+    border: 1px solid #c9c2ae;
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+  }
+  .funhead {
+    font-family: "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #b3541e;
+    letter-spacing: 0.04em;
+    margin: 0.5rem auto 0.8rem;
+    text-shadow: 2px 2px 0 #f3ecd9;
+  }
   .indexbar {
     max-width: 640px;
     margin: 0 auto;
@@ -102,10 +152,29 @@
 </style>
 </head>
 <body>
-  <a href="https://copilot.microsoft.com/" title="Copilot"><img src="robots-header.jpg" alt="Cute robots holding open doors across a meadow" style="display:block; width:100%; max-width:1200px; margin:0 auto 1rem; border-radius:10px;"></a>
+  <table class="headtable">
+    <tr>
+      <td class="colside">
+        <div class="sidehead">Coming Soon</div>
+        <ol class="soonlist">
+          <li>Name</li>
+          <li>Name</li>
+          <li>Name</li>
+        </ol>
+      </td>
+      <td class="colmid">
+        <a href="https://copilot.microsoft.com/" title="Copilot"><img src="robots-header.jpg" alt="Cute robots holding open doors across a meadow" style="display:block; width:100%; max-width:1200px; margin:0 auto 1rem; border-radius:10px;"></a>
+        <div class="funhead">Caeled's Search Engine</div>
+      </td>
+      <td class="colside" style="text-align: center;">
+        <a class="libbtn" href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a>
+        <!-- room for an ordered list on this side later -->
+      </td>
+    </tr>
+  </table>
   <!-- Search box: collapsed engine picker, Google by default; expand it to tick more engines.
        Each picked engine opens in its own new tab. -->
-  <nav class="indexbar"><strong>Index:</strong> <a href="#search">Search</a> <span class="sep">&middot;</span> <a href="#general">General web search</a> <span class="sep">&middot;</span> <a href="#open-source">Open Source</a> <span class="sep">&middot;</span> <a href="#localized">Geographically localized</a> <span class="sep">&middot;</span> <a href="#business">Business</a> <span class="sep">&middot;</span> <a href="#computers">Computers</a> <span class="sep">&middot;</span> <a href="#content">Content</a> <span class="sep">&middot;</span> <a href="#dark-web">Dark web</a> <span class="sep">&middot;</span> <a href="#education">Education</a> <span class="sep">&middot;</span> <a href="#enterprise">Enterprise</a> <span class="sep">&middot;</span> <a href="#events">Events</a> <span class="sep">&middot;</span> <a href="#food">Food and recipes</a> <span class="sep">&middot;</span> <a href="#genealogy">Genealogy</a> <span class="sep">&middot;</span> <a href="#job">Job</a> <span class="sep">&middot;</span> <a href="#legal">Legal</a> <span class="sep">&middot;</span> <a href="#medical">Medical</a> <span class="sep">&middot;</span> <a href="#mobile">Mobile/handheld</a> <span class="sep">&middot;</span> <a href="#news">News</a> <span class="sep">&middot;</span> <a href="#people">People</a> <span class="sep">&middot;</span> <a href="#real-estate">Real estate/property</a> <span class="sep">&middot;</span> <a href="#television">Television</a> <span class="sep">&middot;</span> <a href="#video">Video</a> <span class="sep">&middot;</span> <a href="#video-games">Video games</a> <span class="sep">&middot;</span> <a href="#datasets">Datasets</a> <span class="sep">&middot;</span> <a href="#maps">Maps</a> <span class="sep">&middot;</span> <a href="#multimedia">Multimedia</a> <span class="sep">&middot;</span> <a href="#price">Price</a> <span class="sep">&middot;</span> <a href="#source-code">Source code</a> <span class="sep">&middot;</span> <a href="#bittorrent">BitTorrent</a> <span class="sep">&middot;</span> <a href="#blog">Blog</a> <span class="sep">&middot;</span> <a href="#appliances">Search appliances</a> <span class="sep">&middot;</span> <a href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Caeled's ITKB Notebook</a> <span class="sep">&middot;</span> <a href="DigitalLibrary.html">Digital Library</a></nav>
+  <nav class="indexbar"><strong>Index:</strong> <a href="#search">Search</a> <span class="sep">&middot;</span> <a href="#general">General web search</a> <span class="sep">&middot;</span> <a href="#open-source">Open Source</a> <span class="sep">&middot;</span> <a href="#localized">Geographically localized</a> <span class="sep">&middot;</span> <a href="#business">Business</a> <span class="sep">&middot;</span> <a href="#computers">Computers</a> <span class="sep">&middot;</span> <a href="#content">Content</a> <span class="sep">&middot;</span> <a href="#dark-web">Dark web</a> <span class="sep">&middot;</span> <a href="#education">Education</a> <span class="sep">&middot;</span> <a href="#enterprise">Enterprise</a> <span class="sep">&middot;</span> <a href="#events">Events</a> <span class="sep">&middot;</span> <a href="#food">Food and recipes</a> <span class="sep">&middot;</span> <a href="#genealogy">Genealogy</a> <span class="sep">&middot;</span> <a href="#job">Job</a> <span class="sep">&middot;</span> <a href="#legal">Legal</a> <span class="sep">&middot;</span> <a href="#medical">Medical</a> <span class="sep">&middot;</span> <a href="#mobile">Mobile/handheld</a> <span class="sep">&middot;</span> <a href="#news">News</a> <span class="sep">&middot;</span> <a href="#people">People</a> <span class="sep">&middot;</span> <a href="#real-estate">Real estate/property</a> <span class="sep">&middot;</span> <a href="#television">Television</a> <span class="sep">&middot;</span> <a href="#video">Video</a> <span class="sep">&middot;</span> <a href="#video-games">Video games</a> <span class="sep">&middot;</span> <a href="#datasets">Datasets</a> <span class="sep">&middot;</span> <a href="#maps">Maps</a> <span class="sep">&middot;</span> <a href="#multimedia">Multimedia</a> <span class="sep">&middot;</span> <a href="#price">Price</a> <span class="sep">&middot;</span> <a href="#source-code">Source code</a> <span class="sep">&middot;</span> <a href="#bittorrent">BitTorrent</a> <span class="sep">&middot;</span> <a href="#blog">Blog</a> <span class="sep">&middot;</span> <a href="#appliances">Search appliances</a> <span class="sep">&middot;</span> <a href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Caeled's ITKB Notebook</a> <span class="sep">&middot;</span> <a href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a></nav>
   <div class="desk" style="margin-top: 1.5rem;">
     <h2 id="search" style="margin-top: 0;">Search</h2>
     <form onsubmit="return deskSearch(this)">
@@ -226,7 +295,7 @@
     </p>
     <ul>
       <li class="toppick"><a href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Caeled's ITKB Notebook</a></li>
-      <li><a href="DigitalLibrary.html">Digital Library</a></li>
+      <li><a href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a></li>
       <li><a href="https://www.refdesk.com/">RefDesk</a></li>
       <li><a href="https://www.mediawiki.org/wiki/MediaWiki">Media Wiki</a></li>
       <li><a href="https://www.wikipedia.org/">Wikipedia - Encyclopedia</a></li>
