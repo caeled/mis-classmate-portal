@@ -1,0 +1,30 @@
+STUDENT RESEARCH PORTAL — v7 NOTES (Muse pass, 3 November 2026)
+
+Basis: v6. Method: add-only. Steven selected items 1 and 3 from Muse's
+suggestions; item 2 (an AI-use disclosure template page) was deliberately
+NOT built — he is thinking it over.
+
+ADDED
+1. cbe-playbook.html — "The Competency-Based Playbook." How a competency-based
+   program differs from a traditional course; rubric-as-syllabus; attempt
+   early and treat "not yet" as reconnaissance; experience as evidence
+   (including a week-one PLA prompt); working backwards from the deliverable;
+   pacing as strategy; common traps; a one-page workflow checklist. Written
+   from Steven's first weeks in the Phoenix MIS-CB program; carries a
+   confirm-against-your-handbook note.
+2. apa-cheatsheet.html — "APA 7 Cheat Sheet." In-text citation table (incl.
+   organizational authors and no-date), reference-list templates and a worked
+   journal example, the APA software-style entry for AI tools, student-paper
+   mechanics, the five costliest mistakes, and links to the official APA and
+   Purdue OWL sources, which outrank the page.
+3. Navigation: "CBE Playbook" and "APA 7 Cheat Sheet" links added to the nav
+   of all 30 existing pages, immediately after MIS Launchpad.
+4. index.html: both pages featured in the "New: research and AI study paths"
+   additions list.
+5. copilot/ re-synchronized byte-identical with root.
+
+VALIDATION (this pass)
+- All HTML files parse with balanced tags and closed documents.
+- Both new pages are linked from every page's nav.
+- Cross-links verified: playbook → cheat sheet, cheat sheet → playbook,
+  playbook → launchpad.html#library (anchor exists).
