@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Audio Archive - Steve's Web Desk</title>
-<!-- Public git mirror of the Audio Archive page. Canonical live page: http://caeled.geekgalaxy.com/web/steve/phoenix/AudioArchive.html -->
 <style>
   body {
     font-family: Georgia, "Times New Roman", serif;
@@ -166,6 +165,15 @@
   .intro {
     line-height: 1.55;
   }
+
+  .stackl { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+  .stackl li { border-bottom: none; padding: 0.2rem 0; text-align: left; }
+  .stackl .libbtn { display: block; text-align: left; }
+  .stackr { list-style: none; margin: 0; padding: 0; }
+  .stackr li { border-bottom: none; padding: 0.2rem 0; text-align: right; }
+  .subcols { width: 100%; border-collapse: collapse; }
+  .subcols td { vertical-align: top; padding: 0 0 0 0.6rem; }
+  .subcols td:first-child { padding-left: 0; }
 </style>
 </head>
 <body>
@@ -173,33 +181,50 @@
     <tr>
       <td class="colside">
         <div class="sidehead">Government</div>
-        <ol class="govlist">
-          <li><a href="https://www.cityofdefiance.com/">Defiance City</a></li>
-          <li><a href="https://www.defiance-county.com/">Defiance County</a></li>
-          <li><a href="https://ohio.gov/">Ohio State</a></li>
-          <li><a href="https://www.usa.gov/">Federal Government</a></li>
-          <li><a href="https://www.un.org/">United Nations</a></li>
-          <li><a href="https://www.ed.gov/">Department of Education</a></li>
-          <li><a href="https://www.hhs.gov/">Department of Health</a></li>
-        </ol>
+        <ul class="stackl">
+          <li><a class="libbtn small" href="https://www.cityofdefiance.com/">Defiance City</a></li>
+          <li><a class="libbtn small" href="https://www.defiance-county.com/">Defiance County</a></li>
+          <li><a class="libbtn small" href="https://ohio.gov/">Ohio State</a></li>
+          <li><a class="libbtn small" href="https://www.usa.gov/">Federal Government</a></li>
+          <li><a class="libbtn small" href="https://www.un.org/">United Nations</a></li>
+          <li><a class="libbtn small" href="https://www.ed.gov/">Department of Education</a></li>
+          <li><a class="libbtn small" href="https://www.hhs.gov/">Department of Health</a></li>
+        </ul>
       </td>
       <td class="colmid">
         <a href="https://copilot.microsoft.com/" title="Copilot"><img src="robots-header.jpg" alt="Cute robots holding open doors across a meadow" style="display:block; width:100%; max-width:1200px; margin:0 auto 1rem; border-radius:10px;"></a>
         <div class="funhead">Caeled's Search Engine</div>
+        <div style="text-align: center; margin-top: 0.6rem;"><a class="libbtn small" href="https://web.archive.org/">Wayback Machine</a></div>
       </td>
-      <td class="colside" style="text-align: center;">
-        <a class="libbtn" href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a>
-        <ol class="rightlist">
-          <li><a href="AudioArchive.html">Audio Archive</a></li>
-          <li><a href="https://web.archive.org/">Wayback Machine</a></li>
-        </ol>
-        <ul class="btnstack">
-          <li><a class="libbtn small" href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Knowledge Bases</a></li>
-          <li><a class="libbtn small" href="https://www.uchicagomedicine.org/">Chicago Clinic</a></li>
-          <li><a class="libbtn small" href="https://www.mayoclinic.org/">Mayo Clinic</a></li>
-          <li><a class="libbtn small" href="https://www.mercy.com/">Mercy Health</a></li>
-          <li><a class="libbtn small" href="https://www.promedica.org/">ProMedica Health</a></li>
-        </ul>
+      <td class="colside">
+        <table class="subcols"><tr>
+          <td>
+            <ul class="stackr">
+              <li><a class="libbtn" href="http://caeled.geekgalaxy.com/web/steve/phoenix/DigitalLibrary.html">Digital Library</a></li>
+              <li><a class="libbtn small" href="AudioArchive.html">Audio Archive</a></li>
+              <li><a class="libbtn small" href="https://notebook.google.com/notebook/0d70e944-e6cc-4485-a888-f71f4419168b">Knowledge Bases</a></li>
+              <li><a class="libbtn small" href="https://www.uchicagomedicine.org/">Chicago Clinic</a></li>
+              <li><a class="libbtn small" href="https://www.mayoclinic.org/">Mayo Clinic</a></li>
+              <li><a class="libbtn small" href="https://www.mercy.com/">Mercy Health</a></li>
+              <li><a class="libbtn small" href="https://www.promedica.org/">ProMedica Health</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="sidehead" style="text-align: right;">Social Media</div>
+            <ul class="stackr">
+              <li><a class="libbtn small" href="https://www.facebook.com/">Facebook</a></li>
+              <li><a class="libbtn small" href="https://www.reddit.com/">Reddit</a></li>
+              <li><a class="libbtn small" href="https://www.instagram.com/">Instagram</a></li>
+              <li><a class="libbtn small" href="https://truthsocial.com/">Truth Social</a></li>
+              <li><a class="libbtn small" href="https://www.linkedin.com/in/stevendouglaspowell">LinkedIn</a></li>
+              <li><a class="libbtn small" href="https://x.com/">X</a></li>
+              <li><a class="libbtn small" href="https://www.youtube.com/">YouTube</a></li>
+              <li><a class="libbtn small" href="https://stevendouglaspowell.substack.com">Substack</a></li>
+              <li><a class="libbtn small" href="https://github.com/caeled">GitHub</a></li>
+            </ul>
+          </td>
+        </tr></table>
+      
       </td>
     </tr>
   </table>
