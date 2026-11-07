@@ -121,3 +121,6 @@ aside{overflow-y:auto}
 @media(max-width:700px){.tk-list-head label{flex:1 1 100%}.tk-list-head select{width:100%!important;flex:1}}
 .toolkit .button{border:0}.toolkit .button:hover{background:#1b4038;color:#fff}.tk-card .button:hover{background:#f4dcb6;color:#243b36}
 .toolkit [hidden]{display:none!important}
+.button.ai-resources-button{flex:1 1 100%;justify-content:center;text-align:center;background:#24534b;color:#fff;font-weight:800;font-size:19px;padding:19px 30px;border:3px solid #ddb479;border-radius:6px;box-shadow:0 6px 18px #0003;letter-spacing:.4px}
+.button.ai-resources-button:hover{background:#1b4038;border-color:#f4cc64}
+.button.ai-resources-button:focus-visible{outline:3px solid #3182ce;outline-offset:4px}
