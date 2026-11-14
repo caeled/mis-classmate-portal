@@ -1,0 +1,15 @@
+{
+  "name": "Spectrum Search",
+  "short_name": "Spectrum Search",
+  "description": "Search in plain words. Consent first, calm by design, learns only on your own device.",
+  "start_url": "./SpectrumSearch.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#2f6f6a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
