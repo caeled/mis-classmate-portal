@@ -3,7 +3,10 @@
    small cache so an installed copy opens fast and opens offline.
    Search requests are NEVER cached and never touched here: they go to the
    network exactly as the page sends them, and results stay live. */
-var CACHE = 'spectrum-search-shell-v1';
+/* Shell v2 (Nov 17, 2026): Spectrum Search v0.9. Bumping the cache name
+   makes installed copies drop the v0.8.1 shell and pick up the new page;
+   the activate handler below deletes every other cache. */
+var CACHE = 'spectrum-search-shell-v2';
 var SHELL = [
   './SpectrumSearch.html',
   './manifest.json',
